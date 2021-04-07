@@ -1,0 +1,59 @@
+\documentclass{article}
+
+% Author: Subhodeep Sarkar
+% Date: 7 April, 2021
+
+\usepackage{tikz}
+
+%generate dots and set the geometry
+% I like really thin margins. Feel free to  adjust this
+% as per your tastes.
+
+\usepackage[pattern=dot, 
+patternsize=0.2in, 
+textarea,
+geometry={
+	a4paper,
+	left=8mm,
+	right=8mm,
+	top=15mm,
+	bottom=15mm,
+	headsep=10pt,
+	footskip=25pt,
+}
+]{gridpapers}
+% https://github.com/mcnees/LaTeX-Graph-Paper
+% thanks Prof. McNees and Prof. Leo
+%you can print grids or triangles as well
+
+%header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%header and footer text
+\lhead{\textcolor{gray}{Prof. Hubert J. Farnsworth}}
+\rhead{\textcolor{gray}{Date: {~~~/~~~/~~~~}; Page No.: {~~~~}}}
+\cfoot{\textcolor{gray}{Department of Theoretical Physics, Mars University}}
+
+%colouring the horizontal lines in the header and footer
+% https://tex.stackexchange.com/questions/375121/change-horizontal-line-color-on-top-of-footer
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+% Save standard definitions
+\let\HeadRule\headrule
+\let\FootRule\footrule
+% Add color to standard definitions.
+\renewcommand\headrule{\color{gray}\HeadRule}
+\renewcommand\footrule{\textcolor{gray}{\FootRule}}
+
+%almost done
+
+\begin{document}
+
+%background_image
+%adjust opacity and size as per taste
+%for best result use a black and white persion of the logo
+	
+\tikz[remember picture,overlay] \node[opacity=0.05,inner sep=0pt] at (current page.center){\includegraphics[width=.55\textwidth,height=.4\textheight]{logo.png}};
+
+\end{document}
