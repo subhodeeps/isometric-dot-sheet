@@ -1,0 +1,53 @@
+\documentclass{article}
+
+% Author: Subhodeep Sarkar
+% Date: 7 April, 2021
+
+% I like really thin margins. Feel free to  adjust this
+% as per your tastes.
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	left=8mm,
+	right=8mm,
+	top=15mm,
+	bottom=15mm,
+	headsep=10pt,
+	footskip=25pt,
+}
+
+%generate dots.
+\usepackage[pattern=dot, 
+patternsize=0.2in, 
+textarea,]{gridpapers}
+% https://github.com/mcnees/LaTeX-Graph-Paper
+% thanks Prof. McNees and Prof. Leo
+%you can print grids pr triangles as well
+
+%header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%header and footer text
+\lhead{\textcolor{gray}{Prof. Hubert J. Farnsworth}}
+\rhead{\textcolor{gray}{Date: {~~~/~~~/~~~~}; Page No.: {~~~~}}}
+\cfoot{\textcolor{gray}{Department of Theoretical Physics, Mars University}}
+
+%colouring the horizontal lines in the header and footer
+% https://tex.stackexchange.com/questions/375121/change-horizontal-line-color-on-top-of-footer
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+% Save standard definitions
+\let\HeadRule\headrule
+\let\FootRule\footrule
+% Add color to standard definitions.
+\renewcommand\headrule{\color{gray}\HeadRule}
+\renewcommand\footrule{\textcolor{gray}{\FootRule}}
+
+%all done
+
+\begin{document}
+	
+	~ %otherwise there will be an error
+	
+\end{document}
