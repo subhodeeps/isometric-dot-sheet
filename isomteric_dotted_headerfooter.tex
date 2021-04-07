@@ -3,10 +3,14 @@
 % Author: Subhodeep Sarkar
 % Date: 7 April, 2021
 
+%generate dots and set the geometry
 % I like really thin margins. Feel free to  adjust this
 % as per your tastes.
-\usepackage{geometry}
-\geometry{
+
+\usepackage[pattern=dot, 
+patternsize=0.2in, 
+textarea,
+geometry={
 	a4paper,
 	left=8mm,
 	right=8mm,
@@ -15,11 +19,7 @@
 	headsep=10pt,
 	footskip=25pt,
 }
-
-%generate dots.
-\usepackage[pattern=dot, 
-patternsize=0.2in, 
-textarea,]{gridpapers}
+]{gridpapers}
 % https://github.com/mcnees/LaTeX-Graph-Paper
 % thanks Prof. McNees and Prof. Leo
 %you can print grids or triangles as well
